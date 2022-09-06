@@ -46,12 +46,12 @@ Add the following script calls at file ${BASEDIR}/hook.sh:
 ```
 deploy_challenge() {
 ...
-/usr/local/bin/route53/route53.sh -c -z ${DOMAIN} -r _acme-challenge -t ${TOKEN_VALUE} -v
+/usr/local/bin/admin-utils/route53.sh -c -z ${DOMAIN} -r _acme-challenge -t ${TOKEN_VALUE} -v
 ...
 }
 clean_challenge() {
 ...
-/usr/local/bin/route53/route53.sh -d -z ${DOMAIN} -r _acme-challenge -v
+/usr/local/bin/admin-utils/route53.sh -d -z ${DOMAIN} -r _acme-challenge -v
 ...
 }
 ```
